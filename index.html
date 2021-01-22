@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mouse over and mouse out on a picture</title>
+    <style>
+        .center{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+
+        }
+        h1{
+            text-align: center;
+            background: aqua;
+        }
+        img{
+            border: gray 5px solid;
+        }
+    </style>
 </head>
 <body>
-<h1>hello</h1>
+<h1>How to zoom a picture when mouse go over it </h1>
+<img src="gym%20logo.png" alt="pic to zoom" height="200" width="200" onmouseover="zoomin(this)" onmouseout="zoomout(this)" class="center">
+
+<script>
+    function zoomin(x) {
+        x.style.height='300px';
+        x.style.width='300px';
+    }
+    function zoomout(x){
+        x.style.height='200px';
+        x.style.width='200px';
+    }
+</script>
 </body>
 </html>
